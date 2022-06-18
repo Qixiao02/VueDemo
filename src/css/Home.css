@@ -1,0 +1,235 @@
+/* 清除默认样式的代码 */
+/* 去除常见标签默认的 margin 和 padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+/* 內减模式 */
+* {
+    box-sizing: border-box;
+}
+
+/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+body {
+    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
+        "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #333;
+}
+
+/* 去除列表默认样式 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 去除默认的倾斜效果 */
+em,
+i {
+    font-style: normal;
+}
+
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+    vertical-align: middle;
+}
+
+/* 去除input默认样式 */
+input {
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+/* 左浮动 */
+.fl {
+    float: left;
+}
+
+/* 右浮动 */
+.fr {
+    float: right;
+}
+
+/* 双伪元素清除法 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}		
+
+.header img {
+	width: 100%;
+	height: 600px;
+}
+
+/* 导航👇 */
+#dh {
+	position: relative;
+	margin-top: 0px;
+	width: 1600px;
+	height: 400px;
+	border: 0px;
+	background-color: #0099CC;
+	background-image: url('..//assets/R.png');
+}
+
+#dh ul {
+	float: left;
+	padding: 0px;
+	height: 60px;
+
+}
+
+#dh a {
+	color: #FFF;
+	width: 100px;
+	height: 40px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	font-family: Microsoft Yahei;
+	font-weight: 2px;
+}
+
+#dh {
+	margin: 0px auto;
+}
+
+#dh ul li {
+	height: 60px;
+	list-style: none;
+	float: left;
+}
+
+#dh ul li a:hover {
+	background-color: #ff0000;
+}
+
+#dh ul:hover {
+	display: block;
+}
+
+#dh ul li ul {
+	background-color: #ff5500;
+	position: absolute;
+	display: none;
+}
+
+#dh ul li ul li {
+	float: none;
+	background-color: #aa0000;
+
+}
+
+#dh ul li ul li a {
+	font-size: 13px;
+	font-weight: 0px;
+}
+
+#dh ul li:hover ul {
+	display: block;
+}
+/* 导航👆 */
+
+/* 两栏布局👇 */
+.wrap{
+	
+	width:1600px;
+	margin:0 auto;
+	position: relative;
+}
+#left{
+	float:left;
+	width:900px;
+	height:500px;
+	background: #ccffff;
+}
+#right{
+	float:left;
+	width:700px;
+	height:500px;
+	background: #ff4043;
+}
+#right .nr p{
+	margin-left: 20px;
+	text-align: left;
+}
+#right .nr p:hover a{
+	color: green;
+}
+#right a{
+	height: 48px;
+	line-height: 48px;
+	color: #ffdd19;
+}
+/* 两栏布局👆 */
+
+/* 轮播图👇 */
+
+#pp2{
+	width:6200px;
+	height:500px;
+	animation:switch 18s infinite;
+}
+#pp2>img{
+	float:left;
+}
+#pp1{
+	width:900px;
+	height:500px;
+	overflow:hidden;
+}
+@keyframes switch{
+	0%{};
+	20%{transform:translateX(0px);}
+	40%{transform:translateX(-1200px);}
+	60%{transform:translateX(-2400px);}
+	80%{transform:translateX(-3400px);}
+	100%{transform:translateX(-4600px);}
+}
+
+/* 轮播图👆 */
+
+/* 底部👇 */
+.links {
+       /* margin-bottom: 15px;
+		margin-left: 160px; */
+		margin:10px auto;
+		width: 1600px;
+		height: 100px;
+		background-color: #d60313
+}
+        
+.links a {
+        margin: 0 3px;
+}
+ 
+.copyright {
+        line-height: 20px;
+}

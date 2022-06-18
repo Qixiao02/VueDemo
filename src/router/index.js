@@ -1,25 +1,55 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-
+import { createRouter, createWebHashHistory } from 'vue-router'
+import TopbarFloot from '../components/TopbarFloot.vue'
+import GCD1 from '../components/GCD1'
+import main from '../components/main'
+import History from '../components/History'
+import Hero1 from '../components/Hero1'
+import Hero2 from '../components/Hero2'
+import Tuange from '../components/Tuange'
+import Tuanhui from '..//components/Tuanhui'
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    redirect: '/TopbarFloot/main'
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path:'/TopbarFloot',
+    component:TopbarFloot,
+    children:[
+      {
+        path:'main',
+        component:main
+      },
+      {
+        path:'GCD1',
+        component:GCD1
+      },
+      {
+        path:'History',
+        component:History
+      },
+      {
+        path:'Hero1',
+        component:Hero1
+      },
+      {
+        path:'Hero2',
+        component:Hero2
+      },
+      {
+        path:'Tuange',
+        component:Tuange
+      },
+      {
+        path:'Tuanhui',
+        component:Tuanhui
+      },
+    ]
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
 })
-
 export default router
